@@ -1,8 +1,29 @@
+
 .profile-page {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 32px 16px;
+  padding: 32px;
+  box-sizing: border-box;
   background: #101014;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 280px), 1fr)
+  );
+  gap: 24px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 16px;
+  }
+
+  .profile-grid {
+    gap: 20px;
+  }
 }
